@@ -40,5 +40,5 @@ for root, dirnames, filenames in os.walk("./src_dict"):
     for filename in filenames:
         words = load('./src_dict/%s'%(filename))
         words = process(words)
-        save('./trans_dict/%s'%(filename), words)
+        save('./dict/%s'%(filename), words)
 

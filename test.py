@@ -11,16 +11,16 @@ def tick(text=""):
     return diff
 
 
-import pinin
+import main as pinin
 tick("import time")
 
 text = open("test.file").read()
 tick("read file")
 
 print(len(text))
-times = 1000
+times = 10000
 
 for i in range(times):
-    res = pinin.trans(text)
+    res = pinin.trans_sentense(text)
 
 tick("trans time %s words for %s times"%(len(text), times))

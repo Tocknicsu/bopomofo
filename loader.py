@@ -16,4 +16,7 @@ for root, dirnames, filenames in os.walk("%s/dict"%(directory)):
     for filename in filenames:
         load('%s/dict/%s'%(directory, filename))
 
-load('%s/extension.dict'%(directory))
+try:
+    load('%s/extension.dict'%(directory))
+except:
+    pass
