@@ -98,18 +98,6 @@ def get_lv3_list(url):
                 x = x.find_all("td")
                 word = x[1].a.string
                 pinin = x[2].text
-                """
-                pinin = pinin.replace("（語音）", '').replace('\n', '')
-                if '(' in word or '(' in pinin or '音' in pinin:
-                    continue
-                pinin = pinin.split('\u3000')
-                if len(word) != len(pinin):
-                    continue
-                for i, single_pinin in enumerate(pinin):
-                    if 'ˊ' not in single_pinin and 'ˇ' not in single_pinin and 'ˋ' not in single_pinin and '˙' not in single_pinin:
-                        pinin[i] = pinin[i] + "-"
-                re[word] = ''.join(pinin)
-                """
                 re[word] = pinin
             except Exception as e:
                 print(e)
