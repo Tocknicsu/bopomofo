@@ -22,7 +22,7 @@ times = 10000
 
 for i in range(times):
     res = pinin.trans_sentense(text)
-    print(res)
-    break
 
 tick("trans time %s words for %s times"%(len(text), times))
+
+print(res)
