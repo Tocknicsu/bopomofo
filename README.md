@@ -46,4 +46,4 @@ pip3 install -r requirements.txt
 
 ## TODO
 
-[] 改用 [結巴](https://github.com/fxsjy/jieba) 分詞，並搭配 [萌典開放API](https://www.moedict.tw/uni/%E6%B7%B7) 提高準確度。
+[ ] 改用 [結巴](https://github.com/fxsjy/jieba) 分詞，並搭配 [萌典開放API](https://www.moedict.tw/uni/%E6%B7%B7) 提高準確度。
