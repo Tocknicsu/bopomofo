@@ -22,7 +22,7 @@ def process(src_words):
         for i, single_pinin in enumerate(pinin):
             if 'ˊ' not in single_pinin and 'ˇ' not in single_pinin and 'ˋ' not in single_pinin and '˙' not in single_pinin:
                 pinin[i] = pinin[i] + "-"
-        return_words[word] = ''.join(pinin)
+        return_words[word] = ' '.join(pinin)
     return return_words
 
 def save(filename, words):
