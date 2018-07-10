@@ -32,7 +32,7 @@ def save(filename, words):
 
     
 try:
-    os.makedirs('./trans_dict')
+    os.makedirs('./dict')
 except:
     pass
 
