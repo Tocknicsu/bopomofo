@@ -70,7 +70,7 @@ def get_lv1_list():
     token = get_token()
     url = "/cgi-bin/cbdic/gsweb.cgi?ccd=%s&o=e0&&sec=sec1&brwsimpfmt=10&brwtyp=pin&field_1=pin1&field_1_value=XXX&field_2=pin2&brwsortby=wqyx&active=zybrw"%(token)
     res = get(url)
-    soup = BeautifulSoup(res, "lxml")
+    soup = BeautifulSoup(res, "html5lib")
     lv1 = soup.find_all('span', {"class": "pin_bst_lv1"})
     set_psize(token)
     return [x.a['href'] for x in lv1]
@@ -78,7 +78,7 @@ def get_lv1_list():
 ### get the url for level 2 list "ㄅㄚ" "ㄅㄚˊ" ...
 def get_lv2_list(url):
     res = get(url)
-    soup = BeautifulSoup(res, "lxml")
+    soup = BeautifulSoup(res, "html5lib")
     lv2 = soup.find_all('span', {"class": "pin_bst_lv2"})
     return [x.a['href'] for x in lv2]
 
@@ -88,7 +88,7 @@ def get_lv3_list(url):
     re = {}
     while True:
         res = get(url)
-        soup = BeautifulSoup(res, "lxml")
+        soup = BeautifulSoup(res, "html5lib")
         try:
             lv3 = soup.find('table', {"class": "fmt1table"}).find_all("tr")[1:]
         except:
